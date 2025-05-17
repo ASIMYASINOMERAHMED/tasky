@@ -14,26 +14,7 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 import { v4 as uuidv4 } from "uuid";
-const initialTasks = [
-  {
-    id: uuidv4(),
-    title: "Task 1",
-    description: "Description for Task 1",
-    completed: false,
-  },
-  {
-    id: uuidv4(),
-    title: "Task 2",
-    description: "Description for Task 2",
-    completed: false,
-  },
-  {
-    id: uuidv4(),
-    title: "Task 3",
-    description: "Description for Task 3",
-    completed: false,
-  },
-];
+const initialTasks = [];
 export default function TodoList() {
   const [tasks, setTasks] = React.useState(initialTasks);
   const [newTask, setNewTask] = React.useState("");
