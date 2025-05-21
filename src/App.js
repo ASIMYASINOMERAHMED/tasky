@@ -2,7 +2,7 @@ import "./App.css";
 import TodoList from "./components/TodoList";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-
+import { AlertProvider } from "./contexts/AlertContext";
 const darkTheme = createTheme({
   palette: {
     primary: {
@@ -15,9 +15,11 @@ const darkTheme = createTheme({
 });
 
 function App() {
+ 
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <AlertProvider>
       <div
         className="App"
         style={{
@@ -28,8 +30,9 @@ function App() {
           alignItems: "center",
         }}
       >
-        <TodoList style={{ height: "90%" }} />
+          <TodoList style={{ height: "90%" }} />
       </div>
+      </AlertProvider>
     </ThemeProvider>
   );
 }
